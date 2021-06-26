@@ -22,13 +22,15 @@ function setup() {
   spacecraft=createSprite(400, 350, 50, 50);
   hasDocked =false
   spacecraft.scale=0.2
+  iss.addImage("iss",issimg);
+   spacecraft.addImage("spacer",spacecraft1img)
 }
 
 function draw() {
   background(spacebgimg);  
   drawSprites();
-  iss.addImage("iss",issimg);
-  spacecraft.addImage("spacer",spacecraft1img)
+  
+ 
   if(!hasDocked){
     this.x = Math.random(100,200)
   }
@@ -42,19 +44,19 @@ function draw() {
 
 if(keyIsDown(UP_ARROW)){
   spacecraft.velocityX=1
-spacecraft4.addImage("spacAerr",spacecraft2img);
+spacecraft.addImage("spacAerr",spacecraft2img);
 }
 if(keyIsDown(DOWN_ARROW)){
   spacecraft.velocityX=-1
-spacecraft4.addImage("spacDerr",spacecraft1img);
+spacecraft.addImage("spacDerr",spacecraft1img);
 }
 if(keyIsDown(LEFT_ARROW)){
   spacecraft.velocityX=1
-spacecraft4.addImage("sApacerr",spacecraft4img);
+spacecraft.addImage("sApacerr",spacecraft4img);
 }
 if(keyIsDown(RIGHT_ARROW)){
   spacecraft.velocityX=-1
-spacecraft4.addImage("spaScerr",spacecraft3img);
+spacecraft.addImage("spaScerr",spacecraft3img);
 }
 }
 
